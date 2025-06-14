@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webhook Queue Server</title>
+    <style>body { font-family: sans-serif; max-width: 600px; margin: 40px auto; }</style>
+</head>
+<body>
+    <h1>Webhook Queue Server</h1>
+    <p>This server stores, logs, and replays webhook payloads for registered projects.</p>
+    <ul>
+        <li><code>POST /register</code> - Register project</li>
+        <li><code>POST /set-target/{project_id}</code> - Set where to forward hooks</li>
+        <li><code>POST /hook/{project_id}</code> - Accepts payloads</li>
+        <li><code>GET /logs/{project_id}</code> - View payload logs</li>
+        <li><code>POST /replay/{project_id}</code> - Replay all logs to target</li>
+    </ul>
+</body>
+</html>
